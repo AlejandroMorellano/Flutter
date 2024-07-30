@@ -3,11 +3,10 @@ import '../../data/models/work_model.dart';
 import '../../data/repository/work_repository.dart';
 import 'work_state.dart';
 
-class workCubit extends Cubit<workstate> {
+class WorkCubit extends Cubit<WorkState> {
   final WorkRepository workRepository;
 
-  workCubit({required this.workRepository}) : super(workInitial());
-
+  WorkCubit({required this.workRepository}) : super(WorkInitial());
 
   Future<void> createWork(WorkModel work) async {
     try {

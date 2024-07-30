@@ -7,32 +7,32 @@ class WorkModel {
   final String artists;
   final String id_museum;
   final String pictures;
-}
 
-WorkModel({
-  this.id,
-  required this.title,
-  required this.description,
-  required this.creation_date,
-  required this.technique,
-  required this.artists,
-  required this.id_museum,
-  required this.pictures,
-});
+  WorkModel({
+    this.id,
+    required this.title,
+    required this.description,
+    required this.creation_date,
+    required this.technique,
+    required this.artists,
+    required this.id_museum,
+    required this.pictures,
+  });
 
-factory WorkModel.fromJson(Map<Stirng, dynamic > josn){
-  return WorkModel(
-    id: json['id'],
-    title: json['title'],
-    description: json['description'],
-    creation_date: json['creation_date'],
-    technique: json['technique'],
-    artists: json['artists'],
-    id_museum: json['id_museum'],
-    pictures: josn['pictures'],
-  );
+  factory WorkModel.fromJson(Map<String, dynamic> json) {
+    return WorkModel(
+      id: json['id'],
+      title: json['title'],
+      description: json['description'],
+      creation_date: json['creation_date'],
+      technique: json['technique'],
+      artists: json['artists'],
+      id_museum: json['id_museum'],
+      pictures: json['pictures'],
+    );
+  }
 
-  Map<String, dynamic > toJson() {
+  Map<String, dynamic> toJson() {
     return {
       'id': id,
       'title': title,
